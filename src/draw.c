@@ -529,15 +529,11 @@ static cairo_surface_t *render_background(cairo_surface_t *srf,
 
         /* adding frame */
         x += settings.frame_width;
-        if (first) {
-                y += settings.frame_width;
-                height -= settings.frame_width;
-        }
 
-        width -= 2 * settings.frame_width;
+        width -= settings.frame_width;
 
         if (last)
-                height -= settings.frame_width;
+                height = height;
         else
                 height -= settings.separator_height;
 
